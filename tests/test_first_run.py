@@ -76,6 +76,6 @@ def test_missing_folder_is_one_line(tmp_path):
 
 
 def test_bare_keel_shows_the_mascot_and_where_to_start(tmp_path):
-    code, out = keel(tmp_path, env={"NO_COLOR": "1"})
-    assert code == 0 and "▄█████▄" in out and "keel download" in out and "keel run --dir" in out
+    code, out = keel(tmp_path, env={"NO_COLOR": "1", "KEEL_MASCOT": "screen"})
+    assert code == 0 and "██  ▄   ▄  ██" in out and "keel download" in out and "keel run --dir" in out
     assert "\x1b[" not in out                                # no colour codes when not a terminal / NO_COLOR

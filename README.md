@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs-keel/images/mascot.svg" width="470" alt="keel's mascot, a small block robot, next to the name keel and
+  <img src="docs-keel/images/mascot.svg" width="490" alt="keel's mascot, a small robot whose head is a screen with a smile on it, next to the name keel and
   the line: a steady harness for small local models">
 </p>
 

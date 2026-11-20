@@ -127,7 +127,7 @@ def test_tui_without_a_task_waits_for_one(tmp_path):
     (tmp_path / "script.json").write_text(json.dumps(["Here is what I found."]))
     t = Pty(argv[:-1], tmp_path)                            # same command, task left out
     assert t.read_until(r"Type what you want done"), t.text()[-2000:]
-    assert "▄█████▄" in t.text() and "a steady harness for small local models" in t.text()   # the mascot
+    assert "▀" in t.text() and "a steady harness for small local models" in t.text()   # the mascot (any mood)
     assert t.read_until(r"type a task and press Enter"), t.text()[-2000:]
     t.send("list the files\r")
     assert t.read_until(r"Here is what I found\."), t.text()[-2000:]
