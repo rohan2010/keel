@@ -4,7 +4,7 @@
 
 | Command | What it does |
 |---|---|
-| `keel` | Shows the mascot and where to start |
+| `keel` | Shows the mascot (now and then one of its moods) and where to start |
 | `keel download` | Gets the AI model (about 5 GB): shows the size and free disk, asks first, checks every file. `--check` only verifies the model you have |
 | `keel doctor` | Checks this Mac (memory, the model, Python and MLX, the state folder, disk) and says what to fix. `--backend mlx-server` also tests a model server |
 | `keel run --dir <folder> ["task"]` | Works in a folder. Without a task it opens and waits for you to type one. `--plain` gives simple line output instead of the full screen |
@@ -42,4 +42,5 @@ Every command has `--help`.
 
 Settings, all optional: `KEEL_STATE_DIR`, `KEEL_EXPERIMENTS`, `KEEL_MODELS`, `KEEL_DATA` and `KEEL_BASELINES` move
 those folders; `KEEL_CORE` points `keel` at a specific keel-core; `HF_HOME` moves the model cache; `NO_COLOR` turns off
-colour.
+colour; `KEEL_MASCOT` picks the mascot (`screen`, `cat`, `pup`, `octo`, `visor`, `cyber`, `arcade`,
+`astronaut`, `planet`, `stars`, or `random`; pictures of each in `docs-keel/images/mascots/`).

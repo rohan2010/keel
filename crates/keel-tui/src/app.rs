@@ -148,7 +148,7 @@ impl App {
             } => {
                 self.folder = folder.clone();
                 self.backend = backend.clone();
-                let place = crate::logo::short_path(folder, 60); // never wraps beside the bot
+                let place = crate::logo::short_path(folder, 50); // never wraps beside the mascot (up to 19 columns wide)
                 out.extend(crate::logo::banner(&format!("{backend} · {place}")));
                 out.push(Line::raw(""));
                 if self.task.trim().is_empty() {

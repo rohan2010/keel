@@ -1,0 +1,56 @@
+# The no-model checks (`just lint` + `just test`) on every push: Rust fmt/clippy/tests, ruff, pytest.
+# macOS arm64 only: MLX and the bundled `keel` binary are Apple Silicon only. No model is downloaded.
+name: CI
+
+on:
+  push:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: macos-15
+    timeout-minutes: 30
+    env:
+      CARGO_TERM_COLOR: always
+      HF_HUB_OFFLINE: "1"  # the checks never need the model; fail fast if one tries to fetch it
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+
+      - uses: Swatinem/rust-cache@v2
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Python environment
+        run: |
+          uv sync --locked
+          uv run --no-sync keel-core install-bfcl   # bfcl-eval --no-deps, kept out of pyproject on purpose (its pins clash)
+
+      - name: Lint
+        run: |
+          cargo fmt --check
+          cargo clippy --all-targets -- -D warnings
+          uv run --no-sync ruff check .
+
+      - name: Build
+        run: |
+          cargo build
+          cargo build --release
+
+      - name: Rust tests
+        run: cargo test
+
+      - name: Python tests
+        run: uv run --no-sync pytest -q tests
