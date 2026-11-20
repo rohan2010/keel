@@ -1,0 +1,76 @@
+NO DETECTABLE EFFECT  (agent, validation tier, pre-registered)
+  not tested: ch6-h3-full-vs-goose (the hypothesis before it) was not confirmed;
+  +12.5 points, task-clustered sign-flip permutation (one-sided) p = 0.0911; 16
+  of 24 tasks moved (11 up, 5 down); false success fell -13.8 points (p =
+  0.0433).
+  A = 20261120-014518_ch6_opencode_qwen3.5-4b-8bit
+  B = 20261119-233312_ch6_full_qwen3.5-4b-8bit
+
+                                           A             B       B - A
+  items x tries                       96 x 1        96 x 1            
+  pass@1                               55.2%         67.7%       +12.5
+  false success (all)                  40.0%         26.2%       -13.8
+  false success (of failed)            80.0%         84.0%        +4.0
+  noise band (identical runs)        unknown                          
+  prompt tokens / item               134,840        19,219        -86%
+  tokens read / item                 134,840         3,322        -98%
+  output tokens / item                 1,297         1,004        -23%
+  seconds / item                       161.1         109.5        -32%
+
+  Test: task-clustered sign-flip permutation (one-sided), n = 96 items in 24
+  tasks: 16 moved (11 up, 5 down), p = 0.0911 (one-sided, alpha 0.05). False
+  success: -13.8 points, p = 0.0433.
+  [allowed] backend: baseline:opencode -> mlx
+  [allowed] batch_size: 2 -> 4
+  [allowed] sampling: {'seed': None} -> {'seed': 0}
+  [allowed] rng: server -> per-episode
+  [listed] layers: {'done_gate': None, 'examples': None, 'gnu_tools': None,
+  'loop_break': None, 'recovery': None, 'scheduler': None, 'search_hint': None,
+  'send_note': None, 'shared_prefix': None, 'state_saves': None, 'toolset':
+  'opencode', 'trim_outputs': None, 'user': None, 'verify': None} ->
+  {'done_gate': True, 'examples': True, 'gnu_tools': True, 'loop_break': True,
+  'recovery': False, 'scheduler': 'continuous+cache', 'search_hint': True,
+  'send_note': False, 'shared_prefix': False, 'state_saves': False, 'toolset':
+  'files_py', 'trim_outputs': True, 'user': 'approve_all', 'verify': 'none'}
+  [listed] limits: {'context_budget': None, 'max_context': None, 'max_steps':
+  30} -> {'context_budget': 32000, 'max_context': 32000, 'max_steps': 20}
+  [listed] prompt: None -> 63ba372ae504
+
+  group                                    A             B       B - A
+  A1                                   50.0%         50.0%        +0.0
+  A3                                   25.0%         50.0%       +25.0
+  A4                                   75.0%         50.0%       -25.0
+  A5                                    0.0%         50.0%       +50.0
+  A6                                    0.0%        100.0%      +100.0
+  A7                                  100.0%        100.0%        +0.0
+  B1                                  100.0%        100.0%        +0.0
+  B2                                    0.0%         50.0%       +50.0
+  C1                                   25.0%         50.0%       +25.0
+  C3                                   25.0%        100.0%       +75.0
+  C4                                  100.0%         75.0%       -25.0
+  C5                                   75.0%        100.0%       +25.0
+  D1                                    0.0%         25.0%       +25.0
+  D2                                   75.0%         75.0%        +0.0
+  D3                                   25.0%         50.0%       +25.0
+  D4                                  100.0%        100.0%        +0.0
+  E1                                  100.0%        100.0%        +0.0
+  E3                                    0.0%          0.0%        +0.0
+  E4                                   50.0%        100.0%       +50.0
+  E5                                   75.0%         50.0%       -25.0
+  F1                                  100.0%          0.0%      -100.0
+  F2                                   50.0%        100.0%       +50.0
+  F4                                  100.0%         75.0%       -25.0
+  F5                                   75.0%         75.0%        +0.0
+
+  Fixed (24): A1_1027, A3_1027, A4_1024, A5_1024, A5_1027, A6_1024, A6_1025,
+  A6_1026, A6_1027, B2_1024, B2_1025, C1_1026 ... (+12)
+  Broken (12): A1_1026, A4_1025, A4_1026, C4_1024, D2_1027, E5_1025, F1_1024,
+  F1_1025, F1_1026, F1_1027, F4_1026, F5_1026
+  note: pre-registration ch6-h4-full-vs-opencode (frozen 2026-11-19 22:12:43)
+  matched
+  note: deciding test is task-clustered; item-level exact McNemar (one-sided)
+  beside it (not deciding): p = 0.0326 would pass
+  note: noise band unknown for this config
+  note: fixed sequence: NOT TESTED, ch6-h3-full-vs-goose was not confirmed
+
+report: experiments/compares/20261120-035554_ch6_opencode_vs_ch6_full/report.md

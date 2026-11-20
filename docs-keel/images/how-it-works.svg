@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" width="480" height="600" role="img" aria-labelledby="t d">
+  <title id="t">How keel works</title>
+  <desc id="d">You type a request. keel turns it into small steps with an AI model that runs on your Mac, does one step at a time inside your folder only, asks you before deleting anything, keeps a backup before changing a file, and checks the result before saying it is done. Nothing goes to the internet.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path class="arrowhead" d="M0 0 L10 5 L0 10 z"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .ink { fill: #0b0b0b; } .sub { fill: #52514e; } .mute { fill: #898781; }
+    .card { fill: #fcfcfb; stroke: #c3c2b7; stroke-width: 1.2; }
+    .keelcard { fill: #eef4fc; stroke: #2a78d6; stroke-width: 1.6; }
+    .mac { fill: none; stroke: #898781; stroke-width: 1.2; stroke-dasharray: 6 5; }
+    .line { stroke: #898781; stroke-width: 1.6; fill: none; }
+    .arrowhead { fill: #898781; }
+    .num { fill: #2a78d6; } .numtext { fill: #ffffff; }
+    .safe { fill: #2a78d6; }
+    @media (prefers-color-scheme: dark) {
+      .ink { fill: #f0efec; } .sub { fill: #c3c2b7; }
+      .card { fill: #1a1a19; stroke: #383835; }
+      .keelcard { fill: #15233a; stroke: #3987e5; }
+      .num { fill: #3987e5; } .safe { fill: #3987e5; }
+    }
+  </style>
+
+  <!-- the Mac boundary -->
+  <rect class="mac" x="8" y="8" width="464" height="584" rx="14"/>
+  <text class="mute" x="24" y="32" font-size="13">Your Mac · nothing goes to the internet</text>
+
+  <!-- you -->
+  <rect class="card" x="40" y="48" width="400" height="62" rx="10"/>
+  <text class="ink" x="60" y="74" font-size="15" font-weight="600">You</text>
+  <text class="sub" x="60" y="96" font-size="14">"Sort my photos into folders by year"</text>
+
+  <path class="line" d="M240 110 V140" marker-end="url(#a)"/>
+
+  <!-- keel -->
+  <rect class="keelcard" x="40" y="146" width="400" height="248" rx="12"/>
+  <text class="ink" x="60" y="174" font-size="16" font-weight="700">keel</text>
+  <text class="sub" x="104" y="174" font-size="13">guides the AI, step by step</text>
+
+  <g font-size="14">
+    <circle class="num" cx="72" cy="203" r="11"/><text class="numtext" x="72" y="208" font-size="13" text-anchor="middle" font-weight="700">1</text>
+    <text class="ink" x="94" y="208">Asks the AI for the next small step</text>
+
+    <circle class="num" cx="72" cy="243" r="11"/><text class="numtext" x="72" y="248" font-size="13" text-anchor="middle" font-weight="700">2</text>
+    <text class="ink" x="94" y="248">Does it, but only inside your folder</text>
+
+    <circle class="num" cx="72" cy="283" r="11"/><text class="numtext" x="72" y="288" font-size="13" text-anchor="middle" font-weight="700">3</text>
+    <text class="ink" x="94" y="288">Asks you before deleting anything</text>
+    <text class="sub" x="94" y="306" font-size="12.5">and keeps a backup before changing a file</text>
+
+    <circle class="num" cx="72" cy="337" r="11"/><text class="numtext" x="72" y="342" font-size="13" text-anchor="middle" font-weight="700">4</text>
+    <text class="ink" x="94" y="342">Checks the result before saying "done"</text>
+    <text class="sub" x="94" y="364" font-size="12.5">then tells you what it did</text>
+  </g>
+
+  <!-- below keel: the model (asked, answers) and the folder (the only thing changed) -->
+  <path class="line" d="M128 394 V430" marker-end="url(#a)"/>
+  <path class="line" d="M148 430 V400" marker-end="url(#a)"/>
+  <text class="mute" x="158" y="418" font-size="12">asks</text>
+  <path class="line" d="M344 394 V430" marker-end="url(#a)"/>
+  <text class="mute" x="354" y="418" font-size="12">changes</text>
+
+  <rect class="card" x="40" y="436" width="192" height="96" rx="10"/>
+  <text class="ink" x="56" y="462" font-size="15" font-weight="600">A small AI model</text>
+  <text class="sub" x="56" y="484" font-size="13.5">runs on your Mac itself</text>
+  <text class="sub" x="56" y="504" font-size="13.5">about 5 GB, free</text>
+
+  <rect class="card" x="248" y="436" width="192" height="96" rx="10"/>
+  <rect class="safe" x="248" y="436" width="5" height="96" rx="2"/>
+  <text class="ink" x="266" y="462" font-size="15" font-weight="600">Your folder</text>
+  <text class="sub" x="266" y="484" font-size="13.5">the only place keel</text>
+  <text class="sub" x="266" y="504" font-size="13.5">can change anything</text>
+
+  <text class="sub" x="40" y="566" font-size="13.5">The rest of your Mac stays out of keel's reach.</text>
+</svg>

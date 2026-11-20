@@ -1,0 +1,54 @@
+# Environment and caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+
+# Model weights (download separately; never committed)
+models/
+
+# Your own runs (one folder per run, written by the run scripts)
+experiments/
+
+# Research run snapshot (synced from exp-weights; local reference only, never in the public repo)
+results/
+
+# Working docs (private for now; what goes public is decided later, mostly as a blog)
+doc/
+.playwright-mcp/
+CLAUDE.md
+NEXT-STEPS.md
+
+# Rust
+/target/
+
+# third-party datasets: fetched by scripts (e.g. scripts/fetch_when2call.py), never committed
+data/external/
+.baselines/
+
+# Rust binary copied into the package by wheel builds
+src/keel/bin/
+
+# build output
+dist/
+.ruff_cache/
+
+# Secrets and local settings (never committed)
+.env
+.env.*
+*.pem
+*.key
+
+# Editor and agent folders
+.vscode/
+.idea/
+.claude/
+.playwright-mcp/
+
+# Model files anywhere in the tree, logs, coverage
+*.safetensors
+*.gguf
+*.log
+.coverage
+htmlcov/

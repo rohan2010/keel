@@ -1,0 +1,21 @@
+{
+ "layer": 16,
+ "margin": 0.27,
+ "decode_for_margin": "20261106-191327_bfcl_practice_qwen3.5-4b-8bit",
+ "n_practice": 1747,
+ "practice_heldout_acc_at_margin": 0.8374356038923869,
+ "practice_baseline_acc": 0.8048082427017744,
+ "frozen_at": "2026-11-06 21:03:08",
+ "sha1_npz": "77a9b8b43bb39a39b4de2b83034ddd11b7e7e8a7",
+ "why_layer_16": "Chosen on practice only, before the eval test. Per-layer logistic probes (2-fold held-out, x1_probe_quick.py / x1_text_baseline.py): signal weak early (L0 AUROC 0.80, L2 0.93), clear from L13 (0.98); L16 and L31 tie for best (0.985; held-out errors 87 vs 86). Tie broken by stability: the override margin picked on each practice fold was 0.15 / 0.20 for L16 but 0.11 / 0.0 for L31 (L31's gate behaved very differently between halves). L16 also gave the higher held-out practice accuracy (83.6% vs 83.2% suppress-only). Mid-depth is also cheaper: a gate could stop the prefill read-out at layer 16. Layer 31 was not tried on eval.",
+ "model": {
+  "name": "qwen3.5-4b-8bit",
+  "hf_repo": "mlx-community/Qwen3.5-4B-8bit",
+  "revision": "1704583a86670ba531b7f2c92530a2f725cfd45b",
+  "fingerprint": "9bb10e29ac40a279e01106cc71f7454949e71b53",
+  "fingerprint_method": "sha1(config.json + every safetensors header)"
+ },
+ "validated": "BFCL single-turn eval halves, live: 80.6% -> 86.5% (p = 7e-15), run 20261106-235745",
+ "not_for": "multi-turn: AUROC 0.53 on BFCL multi-turn (reads intent, not whether a call is right)",
+ "fitted_on_run": "20261106-181211_x1_call_gate_qwen3.5-4b-8bit"
+}

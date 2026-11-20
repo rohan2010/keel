@@ -1,0 +1,13 @@
+{
+ "name": "ch6-h1-full-vs-bare",
+ "p": 0.01275634765625,
+ "delta": 0.14583333333333334,
+ "test": "task-clustered sign-flip permutation (one-sided)",
+ "a": [
+  "experiments/20261119-221250_ch6_bare_qwen3.5-4b-8bit"
+ ],
+ "b": [
+  "experiments/20261119-233312_ch6_full_qwen3.5-4b-8bit"
+ ],
+ "recorded": "2026-11-20 00:26:13"
+}

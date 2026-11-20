@@ -1,0 +1,38 @@
+{
+ "built": "2026-11-20 11:31:12",
+ "code_hash": "1b1049713d33",
+ "redaction": {
+  "rule": "the machine's login name -> user, and the first name -> User (exact, case-sensitive)",
+  "replacements": {
+   "runs/20261120-001856_ch6_goose_qwen3.5-4b-8bit/config.json": 1,
+   "runs/20261120-001856_ch6_goose_qwen3.5-4b-8bit/outputs.jsonl": 254,
+   "runs/20261120-014518_ch6_opencode_qwen3.5-4b-8bit/config.json": 1,
+   "runs/20261120-014518_ch6_opencode_qwen3.5-4b-8bit/outputs.jsonl": 771
+  }
+ },
+ "sha256_before_redaction": {
+  "runs/20261119-221250_ch6_bare_qwen3.5-4b-8bit/config.json": "b16804088bc4b6eee99378901af6a1e532dd7e89932eaf3ef6e5fd22305fc0aa",
+  "runs/20261119-221250_ch6_bare_qwen3.5-4b-8bit/outputs.jsonl": "3fda899dca9054bb13cc581b4f5fc82dbc43455ba7e69a743c3eb3de4b6ae5a8",
+  "runs/20261119-221250_ch6_bare_qwen3.5-4b-8bit/eval.json": "b64d303d3e23f08e0ca1dec34ade90495176ce25975b354e27c5dbf1ab489338",
+  "runs/20261119-221250_ch6_bare_qwen3.5-4b-8bit/metrics.json": "128b12a1875746b68922138eca3f8bb70ea958ba30adbdfe180b9d00ca54ac2f",
+  "runs/20261119-221250_ch6_bare_qwen3.5-4b-8bit/timings.json": "7471b64bf4b621c33c743dd3f498fe19d788afb2d2685d50b0dd52a65e6fc28a",
+  "runs/20261119-225416_ch6_keel_qwen3.5-4b-8bit/config.json": "384e449f9563d611b45504f2540ed0340d4936784f180d75383813a827058325",
+  "runs/20261119-225416_ch6_keel_qwen3.5-4b-8bit/outputs.jsonl": "96bb47415b72d9d47e1fb26c27f695d408347c101dd03ebad6784668415123af",
+  "runs/20261119-225416_ch6_keel_qwen3.5-4b-8bit/eval.json": "7521922ec452961c3d86f000f036b53e1b21a7be7dffc16235422902291b575e",
+  "runs/20261119-225416_ch6_keel_qwen3.5-4b-8bit/metrics.json": "b57982b9ec1f9f0bdf7230afa3025dfcec1aec496bbf6087c3eec05b5d601d30",
+  "runs/20261119-225416_ch6_keel_qwen3.5-4b-8bit/timings.json": "5b8eb06a2b4f6b9be5f62a45dde850da0e76cdedcd4e2598822a3e275ea36185",
+  "runs/20261119-233312_ch6_full_qwen3.5-4b-8bit/config.json": "cee847da8813aeec316d073ebad5f5eeff16f0399568dfd825c9efce4642f3fc",
+  "runs/20261119-233312_ch6_full_qwen3.5-4b-8bit/outputs.jsonl": "66cff6e7ceb87a60df83061a5699493b7fa97a98809d0dae1609f3cdc8ae02fd",
+  "runs/20261119-233312_ch6_full_qwen3.5-4b-8bit/eval.json": "1ec8283f14a0e31c6ebd2679a381b847deba1a014ad654436d13a6b759ea5799",
+  "runs/20261119-233312_ch6_full_qwen3.5-4b-8bit/metrics.json": "fbd847219d4041c21eb81549b79cd9897e8cb82d68bd8e16d876106e6e3f1484",
+  "runs/20261119-233312_ch6_full_qwen3.5-4b-8bit/timings.json": "fbd75e95de761f1bf5447cca68710879186b24122c7bdc7d1cadd84b30bf5c29",
+  "runs/20261120-001856_ch6_goose_qwen3.5-4b-8bit/config.json": "55a20316dd1e150298f6c947cf022f8d5c03bbc6021a53f38278730b217bdd6e",
+  "runs/20261120-001856_ch6_goose_qwen3.5-4b-8bit/outputs.jsonl": "3e266d5e62ff29b78fc0122f13cf16bad713fd225363a237947cc009a30dc500",
+  "runs/20261120-001856_ch6_goose_qwen3.5-4b-8bit/metrics.json": "73e05a4b1a3e51b5734fb14e70a5458de32bd2981710cadf80754a3dc11aea9a",
+  "runs/20261120-001856_ch6_goose_qwen3.5-4b-8bit/timings.json": "a8be633b6786d0f47c72a649bb12b487b553ab924d5c5b0a7f9a03ebd2075b2c",
+  "runs/20261120-014518_ch6_opencode_qwen3.5-4b-8bit/config.json": "81e2a93d95eba5809722a3450d0fec3940eba9604d99e77dc8cca19d96188e03",
+  "runs/20261120-014518_ch6_opencode_qwen3.5-4b-8bit/outputs.jsonl": "d4104b5d91c16f4cdfe51108c20725a4aa9678d0694c0c2d80118c24e4760e35",
+  "runs/20261120-014518_ch6_opencode_qwen3.5-4b-8bit/metrics.json": "d3c915fef51fd71b3e77cd6340b2bab95a864cc0ffa89505f3cbd10e62358ae0",
+  "runs/20261120-014518_ch6_opencode_qwen3.5-4b-8bit/timings.json": "e688293dfc51ef2f794c024944b4fce08dc1fa49c405a3c474e6960cba09d5f7"
+ }
+}

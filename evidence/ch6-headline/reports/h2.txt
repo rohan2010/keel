@@ -1,0 +1,66 @@
+NO DETECTABLE EFFECT  (agent, validation tier, pre-registered)
+  false success +1.2 points (B minus A), task-clustered sign-flip permutation
+  (one-sided) p = 0.619; pass rate +14.6 points (not deciding).
+  A = 20261119-221250_ch6_bare_qwen3.5-4b-8bit
+  B = 20261119-233312_ch6_full_qwen3.5-4b-8bit
+
+                                           A             B       B - A
+  items x tries                       96 x 1        96 x 1            
+  pass@1                               53.1%         67.7%       +14.6
+  false success (all)                  25.0%         26.2%        +1.3
+  false success (of failed)            54.1%         84.0%       +29.9
+  noise band (identical runs)        unknown                          
+  prompt tokens / item                19,758        19,219         -3%
+  tokens read / item                   1,851         3,322        +80%
+  output tokens / item                   780         1,004        +29%
+  seconds / item                        82.2         109.5        +33%
+
+  Test: task-clustered sign-flip permutation (one-sided), n = 80 items in 20
+  tasks: 13 moved (7 up, 6 down), p = 0.619 (one-sided, alpha 0.05). False
+  success: +1.2 points, p = 1.
+  [listed] layers: {'done_gate': None, 'examples': None, 'gnu_tools': None,
+  'loop_break': False, 'search_hint': None, 'send_note': None, 'toolset':
+  'shell', 'trim_outputs': False} -> {'done_gate': True, 'examples': True,
+  'gnu_tools': True, 'loop_break': True, 'search_hint': True, 'send_note':
+  False, 'toolset': 'files_py', 'trim_outputs': True}
+  [listed] prompt: 741e25607bbf -> 63ba372ae504
+
+  group                                    A             B       B - A
+  A1                                   25.0%         50.0%       +25.0
+  A3                                   75.0%         50.0%       -25.0
+  A4                                   50.0%         50.0%        +0.0
+  A5                                   50.0%         50.0%        +0.0
+  A6                                   50.0%        100.0%       +50.0
+  A7                                  100.0%        100.0%        +0.0
+  B1                                  100.0%        100.0%        +0.0
+  B2                                   50.0%         50.0%        +0.0
+  C1                                   25.0%         50.0%       +25.0
+  C3                                    0.0%        100.0%      +100.0
+  C4                                  100.0%         75.0%       -25.0
+  C5                                  100.0%        100.0%        +0.0
+  D1                                    0.0%         25.0%       +25.0
+  D2                                   25.0%         75.0%       +50.0
+  D3                                    0.0%         50.0%       +50.0
+  D4                                  100.0%        100.0%        +0.0
+  E1                                  100.0%        100.0%        +0.0
+  E3                                   25.0%          0.0%       -25.0
+  E4                                   75.0%        100.0%       +25.0
+  E5                                   25.0%         50.0%       +25.0
+  F1                                    0.0%          0.0%        +0.0
+  F2                                  100.0%        100.0%        +0.0
+  F4                                   50.0%         75.0%       +25.0
+  F5                                   50.0%         75.0%       +25.0
+
+  Fixed (22): A1_1027, A3_1026, A5_1027, A6_1025, A6_1027, B2_1024, B2_1025,
+  C1_1026, C3_1024, C3_1025, C3_1026, C3_1027 ... (+10)
+  Broken (8): A3_1024, A3_1025, A5_1025, B2_1026, B2_1027, C4_1024, E3_1024,
+  E5_1025
+  note: pre-registration ch6-h2-full-fs-vs-bare (frozen 2026-11-19 22:12:42)
+  matched
+  note: deciding test is task-clustered; item-level exact McNemar (one-sided)
+  beside it (not deciding): p = 0.00806 would pass
+  note: noise band unknown for this config
+  note: fixed sequence: ch6-h1-full-vs-bare confirmed, so this hypothesis is
+  tested at its full alpha
+
+report: experiments/compares/20261120-002621_ch6_bare_vs_ch6_full/report.md

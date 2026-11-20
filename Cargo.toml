@@ -1,0 +1,24 @@
+[workspace]
+resolver = "3"
+members = ["crates/keel", "crates/keel-protocol", "crates/keel-tui"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+publish = false
+
+[workspace.dependencies]
+# ACP: pinned exactly (the crate's major version moves fast; protocol v1, see doc/product/chapter-2-plan.md S0)
+agent-client-protocol = { version = "=5.2.0" }
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+serde = "1"
+serde_json = "1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "process", "io-util", "sync", "time", "io-std", "signal"] }
+tokio-util = { version = "0.7", features = ["compat"] }
+keel-protocol = { path = "crates/keel-protocol" }
+keel-tui = { path = "crates/keel-tui" }
+
+[workspace.lints.clippy]
+unwrap_used = "warn"

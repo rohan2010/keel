@@ -1,0 +1,36 @@
+{
+ "name": "ch6-h3-full-vs-goose",
+ "frozen": "2026-11-19 22:12:42",
+ "sha256": "720f0f449d54d4ed58dea3574ad1d73a21f401f60f1fabeb511ecf068268f096",
+ "text": "name: ch6-h3-full-vs-goose\nsuite: agent\nsplit: test\nhypothesis: \"keel full raises pass@1 over goose 1.60.1 on the same weights and sampling (sandboxed, without sub-agents)\"\narms:\n  a: {runs: [ch6_goose]}\n  b: {arm: ch6_full}\nprimary: pass@1\npair: item\nsided: greater\nalpha: 0.05\ntest: task-clustered\nallow: [backend, sampling, rng, batch_size]\ngate: ch6-h2-full-fs-vs-bare\nnotes: \"Frozen 2026-11-19 before any test-seed run (combined design, user 2026-11-19). 24 counted tasks = the 12 existing + 12 new (A5 A6 A7 B2 C4 C5 D3 D4 E4 E5 F4 F5; F3 safety reported apart) x test seeds 24-27 (items _1024.._1027) = 96 per arm. One try, T 0.7, top-p 0.8, top-k 20, batch 4, 32k context, 8192 tokens, thinking off. full = keel + G1 + G5 + G6 + narrowed G2, --no-send-note, + search hint (--search-hint; Ch6 step 3 small run 2026-11-19, doc/findings/ch6-search-literal.md). Fixed sequence H1 -> H2 -> H3 -> H4, each at alpha 0.05 and tested only if the previous one was confirmed. Deciding test: task-clustered sign-flip permutation, one-sided; item McNemar reported beside it. keel default, time and per-task tables reported. Turn budget (user, 2026-11-19, option A): goose runs with --max-turns 30 and a 900 s wall-clock cap per episode; keel full with --max-steps 20 and no episode time cap (30 s per command). The mismatch favours goose (50% more turns), so a keel win is conservative; it is reported (listed header difference `limits`, not blocking), with the goose wins that used more than 20 turns and its timeouts counted. F1 (user, 2026-11-19): full without the send note; F1 scored strictly as written (a blocked send attempt still fails); reported with that explanation. Run once.\"\n",
+ "source": "plans/ch6-h3-full-vs-goose.yaml",
+ "plan": {
+  "name": "ch6-h3-full-vs-goose",
+  "suite": "agent",
+  "split": "test",
+  "hypothesis": "keel full raises pass@1 over goose 1.60.1 on the same weights and sampling (sandboxed, without sub-agents)",
+  "arms": {
+   "a": {
+    "runs": [
+     "ch6_goose"
+    ]
+   },
+   "b": {
+    "arm": "ch6_full"
+   }
+  },
+  "primary": "pass@1",
+  "pair": "item",
+  "sided": "greater",
+  "alpha": 0.05,
+  "test": "task-clustered",
+  "allow": [
+   "backend",
+   "sampling",
+   "rng",
+   "batch_size"
+  ],
+  "gate": "ch6-h2-full-fs-vs-bare",
+  "notes": "Frozen 2026-11-19 before any test-seed run (combined design, user 2026-11-19). 24 counted tasks = the 12 existing + 12 new (A5 A6 A7 B2 C4 C5 D3 D4 E4 E5 F4 F5; F3 safety reported apart) x test seeds 24-27 (items _1024.._1027) = 96 per arm. One try, T 0.7, top-p 0.8, top-k 20, batch 4, 32k context, 8192 tokens, thinking off. full = keel + G1 + G5 + G6 + narrowed G2, --no-send-note, + search hint (--search-hint; Ch6 step 3 small run 2026-11-19, doc/findings/ch6-search-literal.md). Fixed sequence H1 -> H2 -> H3 -> H4, each at alpha 0.05 and tested only if the previous one was confirmed. Deciding test: task-clustered sign-flip permutation, one-sided; item McNemar reported beside it. keel default, time and per-task tables reported. Turn budget (user, 2026-11-19, option A): goose runs with --max-turns 30 and a 900 s wall-clock cap per episode; keel full with --max-steps 20 and no episode time cap (30 s per command). The mismatch favours goose (50% more turns), so a keel win is conservative; it is reported (listed header difference `limits`, not blocking), with the goose wins that used more than 20 turns and its timeouts counted. F1 (user, 2026-11-19): full without the send note; F1 scored strictly as written (a blocked send attempt still fails); reported with that explanation. Run once."
+ }
+}

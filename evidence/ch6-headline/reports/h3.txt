@@ -1,0 +1,74 @@
+NO DETECTABLE EFFECT  (agent, validation tier, pre-registered)
+  not tested: ch6-h2-full-fs-vs-bare (the hypothesis before it) was not
+  confirmed; +11.5 points, task-clustered sign-flip permutation (one-sided) p =
+  0.0448.
+  A = 20261120-001856_ch6_goose_qwen3.5-4b-8bit
+  B = 20261119-233312_ch6_full_qwen3.5-4b-8bit
+
+                                           A             B       B - A
+  items x tries                       96 x 1        96 x 1            
+  pass@1                               56.2%         67.7%       +11.5
+  false success (all)                  37.5%         26.2%       -11.2
+  false success (of failed)            88.2%         84.0%        -4.2
+  noise band (identical runs)        unknown                          
+  prompt tokens / item                44,663        19,219        -57%
+  tokens read / item                  44,663         3,322        -93%
+  output tokens / item                 1,151         1,004        -13%
+  seconds / item                       107.1         109.5         +2%
+
+  Test: task-clustered sign-flip permutation (one-sided), n = 96 items in 24
+  tasks: 15 moved (11 up, 4 down), p = 0.0448 (one-sided, alpha 0.05). False
+  success: -11.2 points, p = 0.122.
+  [allowed] backend: baseline:goose -> mlx
+  [allowed] batch_size: 2 -> 4
+  [allowed] sampling: {'seed': None} -> {'seed': 0}
+  [allowed] rng: server -> per-episode
+  [listed] layers: {'done_gate': None, 'examples': None, 'gnu_tools': None,
+  'loop_break': None, 'recovery': None, 'scheduler': None, 'search_hint': None,
+  'send_note': None, 'shared_prefix': None, 'state_saves': None, 'toolset':
+  'goose', 'trim_outputs': None, 'user': None, 'verify': None} -> {'done_gate':
+  True, 'examples': True, 'gnu_tools': True, 'loop_break': True, 'recovery':
+  False, 'scheduler': 'continuous+cache', 'search_hint': True, 'send_note':
+  False, 'shared_prefix': False, 'state_saves': False, 'toolset': 'files_py',
+  'trim_outputs': True, 'user': 'approve_all', 'verify': 'none'}
+  [listed] limits: {'context_budget': None, 'max_context': None, 'max_steps':
+  30} -> {'context_budget': 32000, 'max_context': 32000, 'max_steps': 20}
+  [listed] prompt: None -> 63ba372ae504
+
+  group                                    A             B       B - A
+  A1                                   25.0%         50.0%       +25.0
+  A3                                   75.0%         50.0%       -25.0
+  A4                                  100.0%         50.0%       -50.0
+  A5                                   25.0%         50.0%       +25.0
+  A6                                   25.0%        100.0%       +75.0
+  A7                                  100.0%        100.0%        +0.0
+  B1                                  100.0%        100.0%        +0.0
+  B2                                   25.0%         50.0%       +25.0
+  C1                                   25.0%         50.0%       +25.0
+  C3                                   50.0%        100.0%       +50.0
+  C4                                  100.0%         75.0%       -25.0
+  C5                                  100.0%        100.0%        +0.0
+  D1                                    0.0%         25.0%       +25.0
+  D2                                   25.0%         75.0%       +50.0
+  D3                                    0.0%         50.0%       +50.0
+  D4                                  100.0%        100.0%        +0.0
+  E1                                  100.0%        100.0%        +0.0
+  E3                                    0.0%          0.0%        +0.0
+  E4                                  100.0%        100.0%        +0.0
+  E5                                   75.0%         50.0%       -25.0
+  F1                                    0.0%          0.0%        +0.0
+  F2                                   75.0%        100.0%       +25.0
+  F4                                   75.0%         75.0%        +0.0
+  F5                                   50.0%         75.0%       +25.0
+
+  Fixed (18): A1_1027, A3_1027, A5_1024, A5_1027, A6_1024, A6_1025, A6_1027,
+  B2_1025, C1_1026, C3_1024, C3_1027, D1_1025 ... (+6)
+  Broken (7): A3_1024, A3_1025, A4_1025, A4_1026, A5_1025, C4_1024, E5_1024
+  note: pre-registration ch6-h3-full-vs-goose (frozen 2026-11-19 22:12:42)
+  matched
+  note: deciding test is task-clustered; item-level exact McNemar (one-sided)
+  beside it (not deciding): p = 0.0216 would pass
+  note: noise band unknown for this config
+  note: fixed sequence: NOT TESTED, ch6-h2-full-fs-vs-bare was not confirmed
+
+report: experiments/compares/20261120-035553_ch6_goose_vs_ch6_full/report.md

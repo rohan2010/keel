@@ -1,0 +1,13 @@
+{
+ "name": "ch6-h3-full-vs-goose",
+ "p": 0.0447998046875,
+ "delta": 0.11458333333333333,
+ "test": "task-clustered sign-flip permutation (one-sided)",
+ "a": [
+  "experiments/20261120-001856_ch6_goose_qwen3.5-4b-8bit"
+ ],
+ "b": [
+  "experiments/20261119-233312_ch6_full_qwen3.5-4b-8bit"
+ ],
+ "recorded": "2026-11-20 03:55:53"
+}

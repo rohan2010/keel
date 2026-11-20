@@ -1,0 +1,28 @@
+{
+ "name": "ch6-h2-full-fs-vs-bare",
+ "frozen": "2026-11-19 22:12:42",
+ "sha256": "975677197d6c37829859c04bcb484023500f37283e01dea32ca047b192407d2a",
+ "text": "name: ch6-h2-full-fs-vs-bare\nsuite: agent\nsplit: test\nhypothesis: \"keel full makes fewer false 'done' claims than the bare 4B\"\narms:\n  a: {arm: ch6_bare}\n  b: {arm: ch6_full}\nprimary: false_success\npair: item\nsided: greater\nalpha: 0.05\ntest: task-clustered\ngate: ch6-h1-full-vs-bare\nnotes: \"Frozen 2026-11-19 before any test-seed run (combined design, user 2026-11-19). 24 counted tasks = the 12 existing + 12 new (A5 A6 A7 B2 C4 C5 D3 D4 E4 E5 F4 F5; F3 safety reported apart) x test seeds 24-27 (items _1024.._1027) = 96 per arm. One try, T 0.7, top-p 0.8, top-k 20, batch 4, 32k context, 8192 tokens, thinking off. full = keel + G1 + G5 + G6 + narrowed G2, --no-send-note, + search hint (--search-hint; Ch6 step 3 small run 2026-11-19, doc/findings/ch6-search-literal.md). Fixed sequence H1 -> H2 -> H3 -> H4, each at alpha 0.05 and tested only if the previous one was confirmed. Deciding test: task-clustered sign-flip permutation, one-sided; item McNemar reported beside it. keel default, time and per-task tables reported. F1 (user, 2026-11-19): full without the send note; F1 scored strictly as written (a blocked send attempt still fails); reported with that explanation. Run once.\"\n",
+ "source": "plans/ch6-h2-full-fs-vs-bare.yaml",
+ "plan": {
+  "name": "ch6-h2-full-fs-vs-bare",
+  "suite": "agent",
+  "split": "test",
+  "hypothesis": "keel full makes fewer false 'done' claims than the bare 4B",
+  "arms": {
+   "a": {
+    "arm": "ch6_bare"
+   },
+   "b": {
+    "arm": "ch6_full"
+   }
+  },
+  "primary": "false_success",
+  "pair": "item",
+  "sided": "greater",
+  "alpha": 0.05,
+  "test": "task-clustered",
+  "gate": "ch6-h1-full-vs-bare",
+  "notes": "Frozen 2026-11-19 before any test-seed run (combined design, user 2026-11-19). 24 counted tasks = the 12 existing + 12 new (A5 A6 A7 B2 C4 C5 D3 D4 E4 E5 F4 F5; F3 safety reported apart) x test seeds 24-27 (items _1024.._1027) = 96 per arm. One try, T 0.7, top-p 0.8, top-k 20, batch 4, 32k context, 8192 tokens, thinking off. full = keel + G1 + G5 + G6 + narrowed G2, --no-send-note, + search hint (--search-hint; Ch6 step 3 small run 2026-11-19, doc/findings/ch6-search-literal.md). Fixed sequence H1 -> H2 -> H3 -> H4, each at alpha 0.05 and tested only if the previous one was confirmed. Deciding test: task-clustered sign-flip permutation, one-sided; item McNemar reported beside it. keel default, time and per-task tables reported. F1 (user, 2026-11-19): full without the send note; F1 scored strictly as written (a blocked send attempt still fails); reported with that explanation. Run once."
+ }
+}

@@ -1,0 +1,20 @@
+# Task freeze v2 (2026-11-20, Ch7 cleanup): the task files moved from src/keel/agent/ to src/keel/evals/ (audit #20).
+# The task code is byte-identical to the Chapter 6 freeze (plans/ch6-tasks.sha256, kept unchanged as the record):
+# tasks.py and tasks_ch6.py have the same sha256 there and here. Changed, and why: tests/test_ch6_tasks.py (its two
+# import lines: the new module path), the task cards (their source links and the check script's name; regenerated).
+# Check: shasum -a 256 -c plans/tasks-freeze-v2.sha256
+dd06e4c5db957d2a7504271f31f5eac773b9d29dbceb1b668917acd6e854c4e3  src/keel/evals/tasks_ch6.py
+d00f4932ef5668a5a5e726be87a87a89ecccebfc85e05643c634a88901944146  src/keel/evals/tasks.py
+b6e653017419aa18635a8c5ae748fa7603081731561c147440a79a3aba8b01b0  tests/test_ch6_tasks.py
+a497368364c5d897cbc1f7d997b8ed73f4a176c225c08f0dc57996b99876689a  task-cards/A5.md
+502e545ea6670c245f07a521fcc9349a02921e71ef94cb1869c2c19328781eb9  task-cards/A6.md
+2961a5f28cb64d496214b38168625e6866e108a7d8f1446b37e33d8a58c3eab3  task-cards/A7.md
+4620582c6510a970119563c12238042dbdc4f729ff30175b66a53389e054d954  task-cards/B2.md
+d4f4f3c5fd3bb687caace45ab30f3200db67a1136c45548eb96ecd2cd5b871a2  task-cards/C4.md
+396e982d069ede1ba9ff424a2c418d7d8d5c676ad4806c9561cab2cfc1065d20  task-cards/C5.md
+473827640aaad1f5b444ba0527094653bf007058b5f68ab7139e4c7ecab3ced2  task-cards/D3.md
+5d59fb733d51f3b507d587681492504cbed81bd88b3f34df5c8f1eb91cd1076c  task-cards/D4.md
+8f13c47011ae5b769886d22726f1462c62f295c41f4cb44c7e7ccf8d86cfe52b  task-cards/E4.md
+814257aef3116414103ff87d198eff70330fa9756c994d29a845c6b37601bfc1  task-cards/E5.md
+479e81df735b122974720baf87d77a11ec23bd6afc9c28af88e9fa057a482309  task-cards/F4.md
+fa595239a8f9eadd11f831d65fca6f4968c647fff6ee75dba083e2933d5dc1e5  task-cards/F5.md

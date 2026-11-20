@@ -1,0 +1,13 @@
+{
+ "name": "ch6-h4-full-vs-opencode",
+ "p": 0.0911102294921875,
+ "delta": 0.125,
+ "test": "task-clustered sign-flip permutation (one-sided)",
+ "a": [
+  "experiments/20261120-014518_ch6_opencode_qwen3.5-4b-8bit"
+ ],
+ "b": [
+  "experiments/20261119-233312_ch6_full_qwen3.5-4b-8bit"
+ ],
+ "recorded": "2026-11-20 03:55:54"
+}

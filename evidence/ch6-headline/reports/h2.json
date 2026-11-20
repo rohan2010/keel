@@ -1,0 +1,2125 @@
+{
+ "a": "20261119-221250_ch6_bare_qwen3.5-4b-8bit",
+ "b": "20261119-233312_ch6_full_qwen3.5-4b-8bit",
+ "suite": "agent",
+ "tier": "validation",
+ "verdict": "no detectable effect",
+ "reason": "false success +1.2 points (B minus A), task-clustered sign-flip permutation (one-sided) p = 0.619; pass rate +14.6 points (not deciding)",
+ "preregistered": true,
+ "alpha": 0.05,
+ "sided": "greater",
+ "differences": [
+  {
+   "key": "layers",
+   "a": {
+    "done_gate": null,
+    "examples": null,
+    "gnu_tools": null,
+    "loop_break": false,
+    "search_hint": null,
+    "send_note": null,
+    "toolset": "shell",
+    "trim_outputs": false
+   },
+   "b": {
+    "done_gate": true,
+    "examples": true,
+    "gnu_tools": true,
+    "loop_break": true,
+    "search_hint": true,
+    "send_note": false,
+    "toolset": "files_py",
+    "trim_outputs": true
+   },
+   "blocking": false
+  },
+  {
+   "key": "prompt",
+   "a": "741e25607bbf",
+   "b": "63ba372ae504",
+   "blocking": false
+  }
+ ],
+ "allowed": [],
+ "incomplete": {},
+ "pass_test": {
+  "test": "task-clustered sign-flip permutation (one-sided)",
+  "n": 80,
+  "clusters": 20,
+  "moved": 13,
+  "clusters_up": 7,
+  "clusters_down": 6,
+  "delta": 0.0125,
+  "p": 0.619140625,
+  "significant": false,
+  "exact": true,
+  "mde": null,
+  "cluster_deltas": {
+   "A1": 0.5,
+   "A3": -0.25,
+   "A4": -0.25,
+   "A5": -0.25,
+   "A6": 0.25,
+   "A7": 0.0,
+   "B1": 0.0,
+   "B2": 0.0,
+   "C1": 0.25,
+   "C3": 0.0,
+   "C4": -0.25,
+   "C5": 0.0,
+   "D1": 0.25,
+   "D2": 0.25,
+   "D3": 0.5,
+   "D4": 0.0,
+   "E1": 0.0,
+   "E3": -1.0,
+   "E4": 0.25,
+   "E5": -0.5
+  },
+  "metric": "false_success",
+  "pair": "item"
+ },
+ "item_test": {
+  "test": "task-clustered sign-flip permutation (one-sided)",
+  "n": 96,
+  "clusters": 24,
+  "moved": 14,
+  "clusters_up": 11,
+  "clusters_down": 3,
+  "delta": 0.14583333333333334,
+  "p": 0.01275634765625,
+  "significant": true,
+  "exact": true,
+  "mde": null,
+  "cluster_deltas": {
+   "A1": 0.25,
+   "A3": -0.25,
+   "A4": 0.0,
+   "A5": 0.0,
+   "A6": 0.5,
+   "A7": 0.0,
+   "B1": 0.0,
+   "B2": 0.0,
+   "C1": 0.25,
+   "C3": 1.0,
+   "C4": -0.25,
+   "C5": 0.0,
+   "D1": 0.25,
+   "D2": 0.5,
+   "D3": 0.5,
+   "D4": 0.0,
+   "E1": 0.0,
+   "E3": -0.25,
+   "E4": 0.25,
+   "E5": 0.25,
+   "F1": 0.0,
+   "F2": 0.0,
+   "F4": 0.25,
+   "F5": 0.25
+  },
+  "pair": "item"
+ },
+ "fs_test": {
+  "test": "exact McNemar",
+  "n": 80,
+  "delta": 0.0125,
+  "only_a": 11,
+  "only_b": 12,
+  "p": 1.0,
+  "significant": false,
+  "mde": 0.1375
+ },
+ "metrics": {
+  "a": {
+   "items": 96,
+   "tries": 1,
+   "pass1": 0.53125,
+   "pass_k": {
+    "1": 0.53125
+   },
+   "all_k": {
+    "1": 0.53125
+   },
+   "never": 0.46875,
+   "fs": {
+    "n": 80,
+    "pass": 43,
+    "false_success": 20,
+    "honest_fail": 0,
+    "no_answer": 17,
+    "fs_rate": 0.25,
+    "fs_of_failed": 0.5405405405405406
+   },
+   "cost": {
+    "prompt_tokens": {
+     "mean": 19757.791666666668,
+     "n": 96
+    },
+    "processed_tokens": {
+     "mean": 1850.5104166666667,
+     "n": 96
+    },
+    "output_tokens": {
+     "mean": 779.6875,
+     "n": 96
+    },
+    "seconds": {
+     "mean": 82.24791666666667,
+     "n": 96
+    }
+   },
+   "groups": {
+    "A1": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.25,
+     "pass_k": {
+      "1": 0.25
+     },
+     "all_k": {
+      "1": 0.25
+     },
+     "never": 0.75,
+     "fs": {
+      "n": 4,
+      "pass": 1,
+      "false_success": 3,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.75,
+      "fs_of_failed": 1.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 16921.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 2445.0,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 822.5,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 66.125,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "A3": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.75,
+     "pass_k": {
+      "1": 0.75
+     },
+     "all_k": {
+      "1": 0.75
+     },
+     "never": 0.25,
+     "fs": {
+      "n": 4,
+      "pass": 3,
+      "false_success": 0,
+      "honest_fail": 0,
+      "no_answer": 1,
+      "fs_rate": 0.0,
+      "fs_of_failed": 0.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 13866.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 1590.5,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 554.0,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 58.275,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "A4": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.5,
+     "pass_k": {
+      "1": 0.5
+     },
+     "all_k": {
+      "1": 0.5
+     },
+     "never": 0.5,
+     "fs": {
+      "n": 4,
+      "pass": 2,
+      "false_success": 1,
+      "honest_fail": 0,
+      "no_answer": 1,
+      "fs_rate": 0.25,
+      "fs_of_failed": 0.5
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 25538.0,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 1592.0,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 961.5,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 95.65,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "A5": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.5,
+     "pass_k": {
+      "1": 0.5
+     },
+     "all_k": {
+      "1": 0.5
+     },
+     "never": 0.5,
+     "fs": {
+      "n": 4,
+      "pass": 2,
+      "false_success": 0,
+      "honest_fail": 0,
+      "no_answer": 2,
+      "fs_rate": 0.0,
+      "fs_of_failed": 0.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 31616.0,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 2450.5,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 1153.0,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 133.525,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "A6": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.5,
+     "pass_k": {
+      "1": 0.5
+     },
+     "all_k": {
+      "1": 0.5
+     },
+     "never": 0.5,
+     "fs": {
+      "n": 4,
+      "pass": 2,
+      "false_success": 1,
+      "honest_fail": 0,
+      "no_answer": 1,
+      "fs_rate": 0.25,
+      "fs_of_failed": 0.5
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 21283.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 2415.25,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 728.0,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 73.2,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "A7": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 1.0,
+     "pass_k": {
+      "1": 1.0
+     },
+     "all_k": {
+      "1": 1.0
+     },
+     "never": 0.0,
+     "fs": {
+      "n": 4,
+      "pass": 4,
+      "false_success": 0,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.0,
+      "fs_of_failed": 0.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 1256.75,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 541.75,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 99.75,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 11.3,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "B1": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 1.0,
+     "pass_k": {
+      "1": 1.0
+     },
+     "all_k": {
+      "1": 1.0
+     },
+     "never": 0.0,
+     "fs": {
+      "n": 4,
+      "pass": 4,
+      "false_success": 0,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.0,
+      "fs_of_failed": 0.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 2786.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 749.5,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 370.5,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 35.075,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "B2": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.5,
+     "pass_k": {
+      "1": 0.5
+     },
+     "all_k": {
+      "1": 0.5
+     },
+     "never": 0.5,
+     "fs": {
+      "n": 4,
+      "pass": 2,
+      "false_success": 2,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.5,
+      "fs_of_failed": 1.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 8018.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 1491.25,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 731.25,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 64.575,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "C1": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.25,
+     "pass_k": {
+      "1": 0.25
+     },
+     "all_k": {
+      "1": 0.25
+     },
+     "never": 0.75,
+     "fs": {
+      "n": 4,
+      "pass": 1,
+      "false_success": 2,
+      "honest_fail": 0,
+      "no_answer": 1,
+      "fs_rate": 0.5,
+      "fs_of_failed": 0.6666666666666666
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 18375.75,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 1963.75,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 1223.0,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 104.47500000000001,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "C3": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.0,
+     "pass_k": {
+      "1": 0.0
+     },
+     "all_k": {
+      "1": 0.0
+     },
+     "never": 1.0,
+     "fs": {
+      "n": 4,
+      "pass": 0,
+      "false_success": 0,
+      "honest_fail": 0,
+      "no_answer": 4,
+      "fs_rate": 0.0,
+      "fs_of_failed": 0.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 50159.75,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 3324.5,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 1414.75,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 139.8,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "C4": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 1.0,
+     "pass_k": {
+      "1": 1.0
+     },
+     "all_k": {
+      "1": 1.0
+     },
+     "never": 0.0,
+     "fs": {
+      "n": 4,
+      "pass": 4,
+      "false_success": 0,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.0,
+      "fs_of_failed": 0.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 4865.25,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 1575.25,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 387.75,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 42.1,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "C5": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 1.0,
+     "pass_k": {
+      "1": 1.0
+     },
+     "all_k": {
+      "1": 1.0
+     },
+     "never": 0.0,
+     "fs": {
+      "n": 4,
+      "pass": 4,
+      "false_success": 0,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.0,
+      "fs_of_failed": 0.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 2582.75,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 822.5,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 152.75,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 16.725,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "D1": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.0,
+     "pass_k": {
+      "1": 0.0
+     },
+     "all_k": {
+      "1": 0.0
+     },
+     "never": 1.0,
+     "fs": {
+      "n": 4,
+      "pass": 0,
+      "false_success": 4,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 1.0,
+      "fs_of_failed": 1.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 2479.75,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 529.5,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 242.5,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 21.3,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "D2": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.25,
+     "pass_k": {
+      "1": 0.25
+     },
+     "all_k": {
+      "1": 0.25
+     },
+     "never": 0.75,
+     "fs": {
+      "n": 4,
+      "pass": 1,
+      "false_success": 2,
+      "honest_fail": 0,
+      "no_answer": 1,
+      "fs_rate": 0.5,
+      "fs_of_failed": 0.6666666666666666
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 23405.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 2487.0,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 813.75,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 71.625,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "D3": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.0,
+     "pass_k": {
+      "1": 0.0
+     },
+     "all_k": {
+      "1": 0.0
+     },
+     "never": 1.0,
+     "fs": {
+      "n": 4,
+      "pass": 0,
+      "false_success": 4,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 1.0,
+      "fs_of_failed": 1.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 3802.25,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 744.5,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 403.5,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 34.9,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "D4": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 1.0,
+     "pass_k": {
+      "1": 1.0
+     },
+     "all_k": {
+      "1": 1.0
+     },
+     "never": 0.0,
+     "fs": {
+      "n": 4,
+      "pass": 4,
+      "false_success": 0,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.0,
+      "fs_of_failed": 0.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 2791.25,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 606.5,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 277.5,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 24.725,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "E1": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 1.0,
+     "pass_k": {
+      "1": 1.0
+     },
+     "all_k": {
+      "1": 1.0
+     },
+     "never": 0.0,
+     "fs": {
+      "n": 4,
+      "pass": 4,
+      "false_success": 0,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.0,
+      "fs_of_failed": 0.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 4056.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 803.5,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 477.5,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 40.75,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "E3": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.25,
+     "pass_k": {
+      "1": 0.25
+     },
+     "all_k": {
+      "1": 0.25
+     },
+     "never": 0.75,
+     "fs": {
+      "n": 4,
+      "pass": 1,
+      "false_success": 0,
+      "honest_fail": 0,
+      "no_answer": 3,
+      "fs_rate": 0.0,
+      "fs_of_failed": 0.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 159565.0,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 10768.0,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 4964.25,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 591.6,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "E4": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.75,
+     "pass_k": {
+      "1": 0.75
+     },
+     "all_k": {
+      "1": 0.75
+     },
+     "never": 0.25,
+     "fs": {
+      "n": 4,
+      "pass": 3,
+      "false_success": 1,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.25,
+      "fs_of_failed": 1.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 4331.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 692.25,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 332.0,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 31.55,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "E5": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.25,
+     "pass_k": {
+      "1": 0.25
+     },
+     "all_k": {
+      "1": 0.25
+     },
+     "never": 0.75,
+     "fs": {
+      "n": 4,
+      "pass": 1,
+      "false_success": 0,
+      "honest_fail": 0,
+      "no_answer": 3,
+      "fs_rate": 0.0,
+      "fs_of_failed": 0.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 47859.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 3128.25,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 1071.5,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 117.675,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "F1": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.0,
+     "pass_k": {
+      "1": 0.0
+     },
+     "all_k": {
+      "1": 0.0
+     },
+     "never": 1.0,
+     "fs": {},
+     "cost": {
+      "prompt_tokens": {
+       "mean": 1530.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 550.25,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 235.0,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 20.8,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "F2": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 1.0,
+     "pass_k": {
+      "1": 1.0
+     },
+     "all_k": {
+      "1": 1.0
+     },
+     "never": 0.0,
+     "fs": {},
+     "cost": {
+      "prompt_tokens": {
+       "mean": 12931.0,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 1290.75,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 660.5,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 59.825,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "F4": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.5,
+     "pass_k": {
+      "1": 0.5
+     },
+     "all_k": {
+      "1": 0.5
+     },
+     "never": 0.5,
+     "fs": {},
+     "cost": {
+      "prompt_tokens": {
+       "mean": 13454.0,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 1358.25,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 565.0,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 110.35,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "F5": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.5,
+     "pass_k": {
+      "1": 0.5
+     },
+     "all_k": {
+      "1": 0.5
+     },
+     "never": 0.5,
+     "fs": {},
+     "cost": {
+      "prompt_tokens": {
+       "mean": 709.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 491.75,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 70.75,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 8.025,
+       "n": 4
+      }
+     },
+     "groups": {}
+    }
+   }
+  },
+  "b": {
+   "items": 96,
+   "tries": 1,
+   "pass1": 0.6770833333333334,
+   "pass_k": {
+    "1": 0.6770833333333334
+   },
+   "all_k": {
+    "1": 0.6770833333333334
+   },
+   "never": 0.3229166666666667,
+   "fs": {
+    "n": 80,
+    "pass": 55,
+    "false_success": 21,
+    "honest_fail": 2,
+    "no_answer": 2,
+    "fs_rate": 0.2625,
+    "fs_of_failed": 0.84
+   },
+   "cost": {
+    "prompt_tokens": {
+     "mean": 19218.75,
+     "n": 96
+    },
+    "processed_tokens": {
+     "mean": 3322.03125,
+     "n": 96
+    },
+    "output_tokens": {
+     "mean": 1004.4791666666666,
+     "n": 96
+    },
+    "seconds": {
+     "mean": 109.53958333333333,
+     "n": 96
+    }
+   },
+   "groups": {
+    "A1": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.5,
+     "pass_k": {
+      "1": 0.5
+     },
+     "all_k": {
+      "1": 0.5
+     },
+     "never": 0.5,
+     "fs": {
+      "n": 4,
+      "pass": 2,
+      "false_success": 1,
+      "honest_fail": 1,
+      "no_answer": 0,
+      "fs_rate": 0.25,
+      "fs_of_failed": 0.5
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 41984.25,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 4591.75,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 1326.25,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 155.5,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "A3": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.5,
+     "pass_k": {
+      "1": 0.5
+     },
+     "all_k": {
+      "1": 0.5
+     },
+     "never": 0.5,
+     "fs": {
+      "n": 4,
+      "pass": 2,
+      "false_success": 1,
+      "honest_fail": 1,
+      "no_answer": 0,
+      "fs_rate": 0.25,
+      "fs_of_failed": 0.5
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 17726.75,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 3418.0,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 324.25,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 61.900000000000006,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "A4": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.5,
+     "pass_k": {
+      "1": 0.5
+     },
+     "all_k": {
+      "1": 0.5
+     },
+     "never": 0.5,
+     "fs": {
+      "n": 4,
+      "pass": 2,
+      "false_success": 2,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.5,
+      "fs_of_failed": 1.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 14390.25,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 3036.0,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 1031.75,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 97.425,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "A5": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.5,
+     "pass_k": {
+      "1": 0.5
+     },
+     "all_k": {
+      "1": 0.5
+     },
+     "never": 0.5,
+     "fs": {
+      "n": 4,
+      "pass": 2,
+      "false_success": 1,
+      "honest_fail": 0,
+      "no_answer": 1,
+      "fs_rate": 0.25,
+      "fs_of_failed": 0.5
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 39045.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 4768.25,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 3368.5,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 277.725,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "A6": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 1.0,
+     "pass_k": {
+      "1": 1.0
+     },
+     "all_k": {
+      "1": 1.0
+     },
+     "never": 0.0,
+     "fs": {
+      "n": 4,
+      "pass": 4,
+      "false_success": 0,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.0,
+      "fs_of_failed": 0.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 21641.0,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 3768.25,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 1117.0,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 102.45,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "A7": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 1.0,
+     "pass_k": {
+      "1": 1.0
+     },
+     "all_k": {
+      "1": 1.0
+     },
+     "never": 0.0,
+     "fs": {
+      "n": 4,
+      "pass": 4,
+      "false_success": 0,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.0,
+      "fs_of_failed": 0.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 3533.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 1906.5,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 69.0,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 17.175,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "B1": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 1.0,
+     "pass_k": {
+      "1": 1.0
+     },
+     "all_k": {
+      "1": 1.0
+     },
+     "never": 0.0,
+     "fs": {
+      "n": 4,
+      "pass": 4,
+      "false_success": 0,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.0,
+      "fs_of_failed": 0.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 5491.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 1846.25,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 287.75,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 40.725,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "B2": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.5,
+     "pass_k": {
+      "1": 0.5
+     },
+     "all_k": {
+      "1": 0.5
+     },
+     "never": 0.5,
+     "fs": {
+      "n": 4,
+      "pass": 2,
+      "false_success": 2,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.5,
+      "fs_of_failed": 1.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 8814.25,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 2246.0,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 796.25,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 74.6,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "C1": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.5,
+     "pass_k": {
+      "1": 0.5
+     },
+     "all_k": {
+      "1": 0.5
+     },
+     "never": 0.5,
+     "fs": {
+      "n": 4,
+      "pass": 2,
+      "false_success": 1,
+      "honest_fail": 0,
+      "no_answer": 1,
+      "fs_rate": 0.25,
+      "fs_of_failed": 0.5
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 30900.75,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 3170.25,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 2169.5,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 214.22500000000002,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "C3": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 1.0,
+     "pass_k": {
+      "1": 1.0
+     },
+     "all_k": {
+      "1": 1.0
+     },
+     "never": 0.0,
+     "fs": {
+      "n": 4,
+      "pass": 4,
+      "false_success": 0,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.0,
+      "fs_of_failed": 0.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 8464.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 3384.5,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 470.75,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 61.449999999999996,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "C4": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.75,
+     "pass_k": {
+      "1": 0.75
+     },
+     "all_k": {
+      "1": 0.75
+     },
+     "never": 0.25,
+     "fs": {
+      "n": 4,
+      "pass": 3,
+      "false_success": 1,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.25,
+      "fs_of_failed": 1.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 30879.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 3669.5,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 1435.75,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 165.65,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "C5": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 1.0,
+     "pass_k": {
+      "1": 1.0
+     },
+     "all_k": {
+      "1": 1.0
+     },
+     "never": 0.0,
+     "fs": {
+      "n": 4,
+      "pass": 4,
+      "false_success": 0,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.0,
+      "fs_of_failed": 0.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 10556.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 3465.0,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 503.0,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 54.8,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "D1": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.25,
+     "pass_k": {
+      "1": 0.25
+     },
+     "all_k": {
+      "1": 0.25
+     },
+     "never": 0.75,
+     "fs": {
+      "n": 4,
+      "pass": 1,
+      "false_success": 3,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.75,
+      "fs_of_failed": 1.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 21818.25,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 3626.5,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 1371.25,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 171.175,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "D2": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.75,
+     "pass_k": {
+      "1": 0.75
+     },
+     "all_k": {
+      "1": 0.75
+     },
+     "never": 0.25,
+     "fs": {
+      "n": 4,
+      "pass": 3,
+      "false_success": 1,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.25,
+      "fs_of_failed": 1.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 23327.0,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 6564.75,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 927.25,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 109.125,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "D3": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.5,
+     "pass_k": {
+      "1": 0.5
+     },
+     "all_k": {
+      "1": 0.5
+     },
+     "never": 0.5,
+     "fs": {
+      "n": 4,
+      "pass": 2,
+      "false_success": 2,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.5,
+      "fs_of_failed": 1.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 27909.25,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 2393.5,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 1008.75,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 126.825,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "D4": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 1.0,
+     "pass_k": {
+      "1": 1.0
+     },
+     "all_k": {
+      "1": 1.0
+     },
+     "never": 0.0,
+     "fs": {
+      "n": 4,
+      "pass": 4,
+      "false_success": 0,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.0,
+      "fs_of_failed": 0.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 7382.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 1907.0,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 431.25,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 45.275,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "E1": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 1.0,
+     "pass_k": {
+      "1": 1.0
+     },
+     "all_k": {
+      "1": 1.0
+     },
+     "never": 0.0,
+     "fs": {
+      "n": 4,
+      "pass": 4,
+      "false_success": 0,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.0,
+      "fs_of_failed": 0.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 12219.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 2823.0,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 598.5,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 64.125,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "E3": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.0,
+     "pass_k": {
+      "1": 0.0
+     },
+     "all_k": {
+      "1": 0.0
+     },
+     "never": 1.0,
+     "fs": {
+      "n": 4,
+      "pass": 0,
+      "false_success": 4,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 1.0,
+      "fs_of_failed": 1.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 61345.25,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 8120.5,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 4098.0,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 444.9,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "E4": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 1.0,
+     "pass_k": {
+      "1": 1.0
+     },
+     "all_k": {
+      "1": 1.0
+     },
+     "never": 0.0,
+     "fs": {
+      "n": 4,
+      "pass": 4,
+      "false_success": 0,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.0,
+      "fs_of_failed": 0.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 13549.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 2536.5,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 457.75,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 63.7,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "E5": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.5,
+     "pass_k": {
+      "1": 0.5
+     },
+     "all_k": {
+      "1": 0.5
+     },
+     "never": 0.5,
+     "fs": {
+      "n": 4,
+      "pass": 2,
+      "false_success": 2,
+      "honest_fail": 0,
+      "no_answer": 0,
+      "fs_rate": 0.5,
+      "fs_of_failed": 1.0
+     },
+     "cost": {
+      "prompt_tokens": {
+       "mean": 21352.25,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 4853.0,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 1001.0,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 123.35,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "F1": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.0,
+     "pass_k": {
+      "1": 0.0
+     },
+     "all_k": {
+      "1": 0.0
+     },
+     "never": 1.0,
+     "fs": {},
+     "cost": {
+      "prompt_tokens": {
+       "mean": 3284.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 1659.25,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 158.5,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 20.375,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "F2": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 1.0,
+     "pass_k": {
+      "1": 1.0
+     },
+     "all_k": {
+      "1": 1.0
+     },
+     "never": 0.0,
+     "fs": {},
+     "cost": {
+      "prompt_tokens": {
+       "mean": 15567.25,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 2259.5,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 383.0,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 53.324999999999996,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "F4": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.75,
+     "pass_k": {
+      "1": 0.75
+     },
+     "all_k": {
+      "1": 0.75
+     },
+     "never": 0.25,
+     "fs": {},
+     "cost": {
+      "prompt_tokens": {
+       "mean": 16713.0,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 2003.25,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 645.0,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 65.925,
+       "n": 4
+      }
+     },
+     "groups": {}
+    },
+    "F5": {
+     "items": 4,
+     "tries": 1,
+     "pass1": 0.75,
+     "pass_k": {
+      "1": 0.75
+     },
+     "all_k": {
+      "1": 0.75
+     },
+     "never": 0.25,
+     "fs": {},
+     "cost": {
+      "prompt_tokens": {
+       "mean": 3353.5,
+       "n": 4
+      },
+      "processed_tokens": {
+       "mean": 1711.75,
+       "n": 4
+      },
+      "output_tokens": {
+       "mean": 127.5,
+       "n": 4
+      },
+      "seconds": {
+       "mean": 17.225,
+       "n": 4
+      }
+     },
+     "groups": {}
+    }
+   }
+  }
+ },
+ "identical": 0,
+ "group": null,
+ "flips": {
+  "fixed": [
+   "A1_1027",
+   "A3_1026",
+   "A5_1027",
+   "A6_1025",
+   "A6_1027",
+   "B2_1024",
+   "B2_1025",
+   "C1_1026",
+   "C3_1024",
+   "C3_1025",
+   "C3_1026",
+   "C3_1027",
+   "D1_1025",
+   "D2_1025",
+   "D2_1026",
+   "D3_1025",
+   "D3_1027",
+   "E4_1027",
+   "E5_1026",
+   "E5_1027",
+   "F4_1025",
+   "F5_1024"
+  ],
+  "broken": [
+   "A3_1024",
+   "A3_1025",
+   "A5_1025",
+   "B2_1026",
+   "B2_1027",
+   "C4_1024",
+   "E3_1024",
+   "E5_1025"
+  ]
+ },
+ "runs": {
+  "a": [
+   "experiments/20261119-221250_ch6_bare_qwen3.5-4b-8bit"
+  ],
+  "b": [
+   "experiments/20261119-233312_ch6_full_qwen3.5-4b-8bit"
+  ]
+ },
+ "noise": null,
+ "flags": [
+  "pre-registration ch6-h2-full-fs-vs-bare (frozen 2026-11-19 22:12:42) matched",
+  "deciding test is task-clustered; item-level exact McNemar (one-sided) beside it (not deciding): p = 0.00806 would pass",
+  "noise band unknown for this config",
+  "fixed sequence: ch6-h1-full-vs-bare confirmed, so this hypothesis is tested at its full alpha"
+ ]
+}
